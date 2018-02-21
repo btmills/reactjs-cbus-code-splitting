@@ -12,7 +12,7 @@ const Company = ({ match }) => {
 
 	return (
 		<div>
-			<h1>Profile {match.params.id}</h1>
+			<h1>{name}</h1>
 			<Datamap
 				bubbles={[{
 					fillKey: 'bubble',
