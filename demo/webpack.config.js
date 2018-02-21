@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+	output: {
+		publicPath: '/'
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
@@ -25,6 +28,9 @@ module.exports = {
 							useBuiltIns: 'usage'
 						}],
 						'@babel/preset-react'
+					],
+					plugins: [
+						'@babel/plugin-syntax-dynamic-import'
 					]
 				}
 			}

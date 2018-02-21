@@ -1,8 +1,15 @@
 import React from 'react';
+import Loadable from 'react-loadable';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Company from './company';
 import Home from './home';
+import Spinner from './spinner';
+
+// import Company from './company';
+const Company = Loadable({
+	loader: () => import('./company'),
+	loading: Spinner
+});
 
 const App = () => (
 	<Router>
