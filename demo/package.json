@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode development"
+    "dev": "webpack --mode development --watch"
   },
   "dependencies": {
     "react": "^16.2.0",
