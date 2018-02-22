@@ -1,4 +1,4 @@
-export const companies = {
+export const profiles = {
 	'1': {
 		name: 'Acme, Inc.',
 		coordinates: [39.9996374, -83.0112498],

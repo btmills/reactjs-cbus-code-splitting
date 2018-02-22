@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { companies } from './database';
+import { profiles } from './database';
 
 const Home = () => (
 	<div>
 		<h1>Hello from React</h1>
-		<h3>Companies</h3>
+		<h3>Profiles</h3>
 		<ul>
-			{Object.keys(companies).map(id => (
+			{Object.keys(profiles).map(id => (
 				<li key={id}>
-					<Link to={`/company/${id}`}>
-						{companies[id].name}
+					<Link to={`/profile/${id}`}>
+						{profiles[id].name}
 					</Link>
 				</li>
 			))}

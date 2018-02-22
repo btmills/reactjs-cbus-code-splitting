@@ -10,14 +10,14 @@ import {
 	YAxis
 } from 'recharts';
 
-import { companies } from './database';
+import { profiles } from './database';
 
-const Company = ({ match }) => {
+const Profile = ({ match }) => {
 	const {
 		name,
 		coordinates: [latitude, longitude],
 		employees
-	} = companies[match.params.id];
+	} = profiles[match.params.id];
 	const data = employees.map(([d, count]) => ({
 		employees: count,
 		timestamp: new Date(d).getTime()
@@ -66,4 +66,4 @@ const Company = ({ match }) => {
 	);
 };
 
-export default Company;
+export default Profile;
