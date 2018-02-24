@@ -19,10 +19,14 @@ const images = {
 preload(images);
 
 const theme = createTheme({
-	primary: 'white',
-	secondary: '#1F2022',
-	tertiary: '#03A9FC',
-	quarternary: '#CECECE'
+	primary: '#282C34',
+	secondary: '#CFD8E6',
+	tertiary: '#CFD8E6',
+	quarternary: '#CFD8E6'
+	// primary: 'white',
+	// secondary: '#1F2022',
+	// tertiary: '#03A9FC',
+	// quarternary: '#CECECE'
 	// primary: '#011627',
 	// secondary: '#B7CECE',
 	// tertiary: '#B7CECE'
@@ -52,7 +56,7 @@ export default class Presentation extends React.Component {
 					lang="js"
 					code={require('raw-loader!../assets/webpack.example')}
 					ranges={[
-						{ loc: [0, 999], title: 'Webpack config' },
+						{ loc: [0, 999], title: <Heading bold={false}>Webpack config</Heading> },
 						{ loc: [5, 8] },
 						{ loc: [8, 13] },
 						{ loc: [13, 32] },
