@@ -2,22 +2,28 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
 	output: {
-		filename: '[name].[chunkhash].js',
-		chunkFilename: '[name].[chunkhash].js',
+		// filename: '[chunkhash].js',
+		// chunkFilename: '[chunkhash].js',
 		publicPath: '/'
 	},
-	optimization: {
-		runtimeChunk: true
-	},
+	// optimization: {
+	// 	// runtimeChunk: true,
+	// 	splitChunks: {
+	// 		chunks: 'all'
+	// 	}
+	// },
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
 		}),
-		// new BundleAnalyzerPlugin()
+		new BundleAnalyzerPlugin({
+			analyzerMode: 'static',
+			defaultSizes: 'parsed'
+		})
 	],
 	module: {
 		rules: [{

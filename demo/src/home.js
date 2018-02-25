@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { profiles } from './database';
+import Map from './map';
 
 const Home = () => (
 	<div>
@@ -16,6 +17,7 @@ const Home = () => (
 				</li>
 			))}
 		</ul>
+		<Map profiles={Object.values(profiles)} />
 	</div>
 );
 
