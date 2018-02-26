@@ -105,13 +105,17 @@ export default class Presentation extends React.Component {
 					</Heading>
 				</Slide>
 				<Slide bgImage={images.pizza} bgDarken={0.75}>
-					<Heading bold={false} textSize={240}>What?</Heading>
+					<Heading bold={false} textSize="8em">What?</Heading>
 				</Slide>
 				<Slide bgImage={images.airplane} bgDarken={0.75}>
-					<Heading bold={false} textSize={240}>Why?</Heading>
+					<Heading bold={false} textSize="8em">Why?</Heading>
 				</Slide>
 				<Slide>
-					<Heading bold={false} textSize={240}>Demo</Heading>
+					<Heading bold={false} textSize="8em">
+						<a href="http://localhost:8001" target="_blank">
+							Demo
+						</a>
+					</Heading>
 				</Slide>
 				<Slide>
 					<svg height={500} width={600}>
@@ -127,24 +131,16 @@ export default class Presentation extends React.Component {
 						<DiagramArrow from={[500, 280]} to={[500, 410]} />
 					</svg>
 				</Slide>
-				{/* <CodeSlide
-					lang="js"
-					code={require('raw-loader!../assets/components.js.example')}
-					ranges={[
-						{
-							loc: [0, 999],
-							title: <Heading bold={false}>Components</Heading>
-						},
-						{ loc: [0, 7] },
-						{ loc: [8, 14] },
-						{ loc: [15, 22] },
-						{ loc: [23, 29] },
-						{ loc: [30, 36] }
-					]}
-				/> */}
 				<Slide>
 					<Heading bold={false}>Network Tools</Heading>
 					<Image src={images.networkThrottling} />
+				</Slide>
+				<Slide>
+					<Heading bold={false} textSize="8em">
+						<a href="http://localhost:8001" target="_blank">
+							Demo
+						</a>
+					</Heading>
 				</Slide>
 				<CodeSlide
 					lang="js"
@@ -259,6 +255,20 @@ export default class Presentation extends React.Component {
 						{ loc: [8, 15] }
 					]}
 				/>
+				<Slide>
+					<svg height={500} width={600}>
+						<DiagramBlock name="App" x={300} y={60} />
+						<DiagramBlock name="Home" x={150} y={250} />
+						<DiagramBlock name="Profile" x={450} y={250} />
+						<DiagramBlock name="Map" x={150} y={440} />
+						<DiagramBlock name="Chart" x={450} y={440} />
+						<DiagramArrow from={[250, 90]} to={[210, 220]} />
+						<DiagramArrow from={[350, 90]} to={[510, 220]} />
+						<DiagramArrow from={[170, 280]} to={[170, 410]} />
+						<DiagramArrow from={[390, 280]} to={[210, 410]} />
+						<DiagramArrow from={[500, 280]} to={[500, 410]} />
+					</svg>
+				</Slide>
 				<CodeSlide
 					lang="jsx"
 					code={require('raw-loader!../assets/04-react-loadable/home.js.example')}
@@ -300,6 +310,24 @@ export default class Presentation extends React.Component {
 						{ loc: [24, 26] }
 					]}
 				/>
+				<Slide>
+					<iframe
+						sandbox="allow-scripts"
+						srcDoc={require('../assets/05-split/analyzer.html')}
+						style={{
+							border: 'none',
+							minHeight: 620,
+							minWidth: 920
+						}}
+					/>
+				</Slide>
+				<Slide>
+					<Heading bold={false} textSize="8em">
+						<a href="http://localhost:8002" target="_blank">
+							Demo
+						</a>
+					</Heading>
+				</Slide>
 			</Deck>
 		);
 	}
