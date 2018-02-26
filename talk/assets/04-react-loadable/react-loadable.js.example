@@ -1,0 +1,15 @@
+import Loadable from 'react-loadable';
+import Spinner from './spinner';
+
+const AsyncMap = Loadable({
+  loader: () => import('./map'),
+  loading: Spinner
+});
+
+classs App extends React.Component {
+  render() {
+    return <AsyncMap />;
+  }
+}
+
+export default App;

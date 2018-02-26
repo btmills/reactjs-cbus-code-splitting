@@ -1,6 +1,6 @@
 import React from 'react';
 
-class AsyncComponent extends React.Component {
+class AsyncMap extends React.Component {
 
   constructor(props) {
     super(props);
@@ -11,7 +11,7 @@ class AsyncComponent extends React.Component {
   }
 
   componentDidMount() {
-    import('./async-component').then(
+    import('./map').then(
       ({ default: Component }) => {
         this.setState({
           Component
@@ -23,17 +23,23 @@ class AsyncComponent extends React.Component {
   render() {
     const { Component } = this.state;
 
-    if (Component) {
+    if (!Component) {
       return (
-        <Component {...this.props} />
+        <p>Loading...</p>
       );
     } else {
       return (
-        <p>Loading...</p>
+        <Component {...this.props} />
       );
     }
   }
 
 }
 
-export default AsyncComponent;
+class App extends React.Component {
+  render() {
+    return <AsyncMap />;
+  }
+}
+
+export default App;
