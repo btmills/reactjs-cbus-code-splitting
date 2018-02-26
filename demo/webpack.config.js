@@ -6,16 +6,16 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
 	output: {
-		// filename: '[chunkhash].js',
-		// chunkFilename: '[chunkhash].js',
+		filename: '[chunkhash].js',
+		chunkFilename: '[chunkhash].js',
 		publicPath: '/'
 	},
-	// optimization: {
-	// 	// runtimeChunk: true,
-	// 	splitChunks: {
-	// 		chunks: 'all'
-	// 	}
-	// },
+	optimization: {
+		runtimeChunk: true,
+		splitChunks: {
+			chunks: 'all'
+		}
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
