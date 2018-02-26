@@ -215,6 +215,30 @@ export default class Presentation extends React.Component {
 						{ loc: [9, 12] }
 					]}
 				/>
+				<CodeSlide
+					lang="jsx"
+					code={require('raw-loader!../assets/03-dynamic-import/async-component.js.example')}
+					ranges={[
+						{
+							loc: [0, 999],
+							title: (
+								<Heading bold={false} size={2}>
+									Async Component
+								</Heading>
+							)
+						},
+						{ loc: [7, 10] },
+						{ loc: [22, 35] },
+						{ loc: [23, 24] },
+						{ loc: [25, 26] },
+						{ loc: [29, 34] },
+						{ loc: [12, 21] },
+						{ loc: [13, 14] },
+						{ loc: [14, 15] },
+						{ loc: [15, 18] },
+						{ loc: [25, 29] }
+					]}
+				/>
 			</Deck>
 		);
 	}
