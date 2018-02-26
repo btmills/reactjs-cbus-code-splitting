@@ -16,6 +16,7 @@ const App = () => (
 		<div>
 			<Route exact path="/" component={Home} />
 			<Route path="/profile/:id" component={Profile} />
+			<a href="/report.html">Bundle Analyzer</a>
 		</div>
 	</Router>
 );
