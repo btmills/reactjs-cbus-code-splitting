@@ -3,8 +3,11 @@ import {
 	Appear,
 	Code,
 	Deck,
+	Fill,
+	Fit,
 	Heading,
 	Image,
+	Layout,
 	Slide,
 	Text
 } from 'spectacle';
@@ -17,15 +20,18 @@ require('normalize.css');
 
 const images = {
 	// Photo by Gerrie van der Walt on Unsplash
-	airplane: require('../assets/airplane.jpg'),
-	networkThrottling: require('../assets/network-throttling.png'),
+	airplane: require('../assets/airplane.jpg').replace('/', ''),
+	driveCapital: require('../assets/drive-capital.png').replace('/', ''),
+	eslint: require('../assets/eslint.svg'),
+	networkThrottling: require('../assets/network-throttling.png').replace('/', ''),
 	// Photo by Igor Ovsyannykov on Unsplash
-	pizza: require('../assets/pizza.jpg'),
-	screenshotAnalyzer02: require('../assets/02-analyzer/analyzer.png')
+	pizza: require('../assets/pizza.jpg').replace('/', ''),
+	screenshotAnalyzer02: require('../assets/02-analyzer/analyzer.png').replace('/', ''),
+	tbdbitl: require('../assets/tbdbitl.jpg').replace('/', '')
 };
-Object.keys(images).forEach((key) => {
-	images[key] = images[key].replace('/', '');
-});
+// Object.keys(images).forEach((key) => {
+// 	images[key] = images[key].replace('/', '');
+// });
 preload(images);
 
 const colors = {
@@ -103,6 +109,15 @@ export default class Presentation extends React.Component {
 					>
 						Code-Splitting a React App
 					</Heading>
+				</Slide>
+				<Slide bgImage={images.tbdbitl} bgDarken={0.75}>
+					<Heading bold={false} textSize="8em" style={{ margin: '-20px 0 120px' }}>
+						Hi
+					</Heading>
+					<Layout style={{ marginTop: '80px' }}>
+						<Fill><Image src={images.driveCapital} /></Fill>
+						<Fill><Image height="70%" src={images.eslint} /></Fill>
+					</Layout>
 				</Slide>
 				<Slide bgImage={images.pizza} bgDarken={0.75}>
 					<Heading bold={false} textSize="8em">What?</Heading>
@@ -219,7 +234,7 @@ export default class Presentation extends React.Component {
 							loc: [0, 999],
 							title: (
 								<Heading bold={false} size={2}>
-									AsyncMap
+									AsyncChart
 								</Heading>
 							)
 						},
@@ -231,6 +246,7 @@ export default class Presentation extends React.Component {
 						{ loc: [13, 14] },
 						{ loc: [14, 15] },
 						{ loc: [15, 18] },
+						{ loc: [23, 26] },
 						{ loc: [29, 34] },
 						{ loc: [38, 45] }
 					]}
@@ -252,6 +268,8 @@ export default class Presentation extends React.Component {
 						{ loc: [0, 1] },
 						{ loc: [1, 2] },
 						{ loc: [3, 7] },
+						{ loc: [4, 5] },
+						{ loc: [5, 6] },
 						{ loc: [8, 15] }
 					]}
 				/>
@@ -327,6 +345,16 @@ export default class Presentation extends React.Component {
 							Demo
 						</a>
 					</Heading>
+				</Slide>
+				<Slide>
+					<div style={{ flex: 1, flexDirection: 'column' }}>
+						<div style={{ flex: 1, margin: '180px 0 200px' }}>
+							<Heading bold={false} textSize="8em">Q&A</Heading>
+						</div>
+						<Text textColor={colors.foreground}>
+							@brandontmills
+						</Text>
+					</div>
 				</Slide>
 			</Deck>
 		);
