@@ -1,14 +1,14 @@
 import Loadable from 'react-loadable';
 import Spinner from './spinner';
 
-const AsyncMap = Loadable({
-  loader: () => import('./map'),
+const AsyncChart = Loadable({
+  loader: () => import('./chart'),
   loading: Spinner
 });
 
 class App extends React.Component {
   render() {
-    return <AsyncMap />;
+    return <AsyncChart />;
   }
 }
 
