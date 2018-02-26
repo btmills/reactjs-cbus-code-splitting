@@ -15,10 +15,6 @@ const Chart = Loadable({
   loader: () => import('./chart'),
   loading: Spinner
 });
-const Profile = Loadable({
-  loader: () => import('./profile'),
-  loading: Spinner
-});
 
 const Home = () => (
   <div>
@@ -27,7 +23,6 @@ const Home = () => (
     <ul
       onMouseOver={() => {
         Chart.preload();
-        Profile.preload();
       }}
     >
       {Object.keys(profiles).map(id => (

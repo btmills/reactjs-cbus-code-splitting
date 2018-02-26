@@ -14,17 +14,12 @@ const Chart = Loadable({
 	loader: () => import('./chart' /* webpackChunkName: "chart" */),
 	loading: Spinner
 });
-const Profile = Loadable({
-	loader: () => import('./profile' /* webpackChunkName: "profile" */),
-	loading: Spinner
-});
 
 const Home = () => (
 	<div>
 		<h1>Hello from React</h1>
 		<h3>Profiles</h3>
 		<ul onMouseOver={() => {
-			Profile.preload();
 			Chart.preload();
 		}}>
 			{Object.keys(profiles).map(id => (

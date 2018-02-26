@@ -1,5 +1,4 @@
 import React from 'react';
-import Datamap from 'react-datamaps';
 import Loadable from 'react-loadable';
 
 import { profiles } from './database';
