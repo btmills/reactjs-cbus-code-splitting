@@ -1,35 +1,35 @@
 import React from 'react';
 
-class AsyncMap extends React.Component {
+class AsyncChart extends React.Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      Component: null
+      Chart: null
     };
   }
 
   componentDidMount() {
-    import('./map').then(
-      ({ default: Component }) => {
+    import('./chart').then(
+      ({ default: Chart }) => {
         this.setState({
-          Component
+          Chart
         });
       }
     );
   }
 
   render() {
-    const { Component } = this.state;
+    const { Chart } = this.state;
 
-    if (!Component) {
+    if (!Chart) {
       return (
         <p>Loading...</p>
       );
     } else {
       return (
-        <Component {...this.props} />
+        <Chart {...this.props} />
       );
     }
   }
@@ -38,7 +38,7 @@ class AsyncMap extends React.Component {
 
 class App extends React.Component {
   render() {
-    return <AsyncMap />;
+    return <AsyncChart />;
   }
 }
 
