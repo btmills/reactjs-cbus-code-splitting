@@ -22,7 +22,8 @@ module.exports = {
 		}),
 		new BundleAnalyzerPlugin({
 			analyzerMode: 'static',
-			defaultSizes: 'parsed'
+			defaultSizes: 'parsed',
+			openAnalyzer: false
 		})
 	],
 	module: {
