@@ -1,8 +1,15 @@
 import React from 'react';
+import Loadable from 'react-loadable';
 import { Link } from 'react-router-dom';
 
 import { profiles } from './database';
+import Spinner from './spinner';
+
 import Map from './map';
+// const Map = Loadable({
+// 	loader: () => import('./map' /* webpackChunkName: "map" */),
+// 	loading: Spinner
+// });
 
 const Home = () => (
 	<div>
