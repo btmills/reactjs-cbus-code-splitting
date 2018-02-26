@@ -1,0 +1,37 @@
+// webpack.config.js
+const path = require('path');
+const { BundleAnalyzerPlugin } =
+  require('webpack-bundle-analyzer');
+
+module.exports = {
+  output: {
+    filename: '[chunkhash].js',
+    chunkFilename: '[chunkhash].js'
+  },
+  optimization: {
+    runtimeChunk: true
+  },
+  plugins: [
+    new BundleAnalyzerPlugin()
+  ],
+  module: {
+    rules: [{
+      test: /\.js$/,
+      include: path.resolve(__dirname, 'src'),
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['@babel/preset-env', {
+              modules: false
+            }],
+            '@babel/preset-react'
+          ],
+          plugins: [
+            '@babel/plugin-syntax-dynamic-import'
+          ]
+        }
+      }
+    }]
+  }
+};

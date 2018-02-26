@@ -346,10 +346,67 @@ export default class Presentation extends React.Component {
 						</a>
 					</Heading>
 				</Slide>
+				<CodeSlide
+					lang="js"
+					code={require('raw-loader!../assets/06-preloading/home.js.example')}
+					ranges={[
+						{
+							loc: [0, 999],
+							title: (
+								<Heading bold={false} size={2}>
+									Preloading
+								</Heading>
+							)
+						},
+						{ loc: [13, 21] },
+						{ loc: [26, 32] }
+					]}
+				/>
+				<Slide>
+					<Heading bold={false} textSize="8em">
+						<a href="http://localhost:8003" target="_blank">
+							Demo
+						</a>
+					</Heading>
+				</Slide>
+				<CodeSlide
+					lang="js"
+					code={require('raw-loader!../assets/07-caching/webpack.config.js.example')}
+					ranges={[
+						{
+							loc: [0, 999],
+							title: (
+								<Heading bold={false} size={2}>
+									Caching
+								</Heading>
+							)
+						},
+						{ loc: [6, 10] },
+						{ loc: [10, 13] }
+					]}
+				/>
+				<Slide>
+					<iframe
+						sandbox="allow-scripts"
+						srcDoc={require('../assets/07-caching/analyzer.html')}
+						style={{
+							border: 'none',
+							minHeight: 620,
+							minWidth: 920
+						}}
+					/>
+				</Slide>
+				<Slide>
+					<Heading bold={false} textSize="8em">
+						<a href="http://localhost:8004" target="_blank">
+							Demo
+						</a>
+					</Heading>
+				</Slide>
 				<Slide>
 					<div style={{ flex: 1, flexDirection: 'column' }}>
 						<div style={{ flex: 1, margin: '180px 0 200px' }}>
-							<Heading bold={false} textSize="8em">Q&A</Heading>
+							<Heading bold={false} textSize="8em">Q&amp;A</Heading>
 						</div>
 						<Text textColor={colors.foreground}>
 							@brandontmills
