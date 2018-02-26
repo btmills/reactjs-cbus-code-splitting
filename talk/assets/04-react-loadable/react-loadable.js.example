@@ -6,7 +6,7 @@ const AsyncMap = Loadable({
   loading: Spinner
 });
 
-classs App extends React.Component {
+class App extends React.Component {
   render() {
     return <AsyncMap />;
   }

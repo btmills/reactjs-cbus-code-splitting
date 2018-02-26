@@ -1,0 +1,32 @@
+// home.js
+import React from 'react';
+import Loadable from 'react-loadable';
+import { Link } from 'react-router-dom';
+
+import { profiles } from './database';
+import Spinner from './spinner';
+
+// import Map from './map';
+const Map = Loadable({
+  loader: () => import('./map'),
+  loading: Spinner
+});
+
+const Home = () => (
+  <div>
+    <h1>Hello from React</h1>
+    <h3>Profiles</h3>
+    <ul>
+      {Object.keys(profiles).map(id => (
+        <li key={id}>
+          <Link to={`/profile/${id}`}>
+            {profiles[id].name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+    <Map profiles={Object.values(profiles)} />
+  </div>
+);
+
+export default Home;

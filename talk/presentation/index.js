@@ -259,6 +259,47 @@ export default class Presentation extends React.Component {
 						{ loc: [8, 15] }
 					]}
 				/>
+				<CodeSlide
+					lang="jsx"
+					code={require('raw-loader!../assets/04-react-loadable/home.js.example')}
+					ranges={[
+						{
+							loc: [0, 999],
+							title: (
+								<Heading bold={false} size={2}>
+									<Code textColor="inherit" textSize="inherit">
+										home.js
+									</Code>
+								</Heading>
+							)
+						},
+						{ loc: [2, 3] },
+						{ loc: [6, 7] },
+						{ loc: [8, 13] },
+						{ loc: [27, 28] }
+					]}
+				/>
+				<CodeSlide
+					lang="jsx"
+					code={require('raw-loader!../assets/04-react-loadable/profile.js.example')}
+					ranges={[
+						{
+							loc: [0, 999],
+							title: (
+								<Heading bold={false} size={2}>
+									<Code textColor="inherit" textSize="inherit">
+										profile.js
+									</Code>
+								</Heading>
+							)
+						},
+						{ loc: [3, 4] },
+						{ loc: [6, 7] },
+						{ loc: [8, 13] },
+						{ loc: [13, 18] },
+						{ loc: [24, 26] }
+					]}
+				/>
 			</Deck>
 		);
 	}
