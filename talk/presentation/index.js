@@ -358,8 +358,9 @@ export default class Presentation extends React.Component {
 								</Heading>
 							)
 						},
-						{ loc: [13, 21] },
-						{ loc: [26, 32] }
+						{ loc: [13, 17] },
+						{ loc: [29, 32] },
+						{ loc: [22, 27] }
 					]}
 				/>
 				<Slide>
@@ -382,7 +383,9 @@ export default class Presentation extends React.Component {
 							)
 						},
 						{ loc: [6, 10] },
-						{ loc: [10, 13] }
+						{ loc: [10, 16] },
+						{ loc: [11, 12] },
+						{ loc: [12, 15] }
 					]}
 				/>
 				<Slide>
