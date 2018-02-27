@@ -4,13 +4,16 @@
 
 ### View the slides
 
+The slides are built using [Spectacle](https://github.com/FormidableLabs/spectacle) and [spectacle-code-slide](https://github.com/jamiebuilds/spectacle-code-slide).
+Do yourself a favor and check them both out.
+
 ```sh
 $ cd talk
 $ npm install
 $ npm start
 ```
 
-The slides will be available at [http://localhost:3000](localhost:3000).
+The slides will be available at [localhost:3000](http://localhost:3000).
 
 ### Try the demo
 
@@ -21,4 +24,4 @@ $ cd dist
 $ python -m SimpleHTTPServer 8000
 ```
 
-The demo will be available at [http://localhost:8000](localhost:8000).
+The demo will be available at [localhost:8000](http://localhost:8000).
